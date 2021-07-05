@@ -1,0 +1,22 @@
+#page-room {
+  display: flex;
+  flex-direction: column;
+  background-color: #e5e5e5;
+  height: 100vh; //tela toda
+  header {
+    div {
+      display: flex;
+      margin: 1rem 5rem 1rem 5rem;
+      justify-content: space-between;
+      img {
+        max-width: 220px;
+      }
+    }
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; //todos os elementos vao esticar para caber na largura total
+  text-align: center;
+}
