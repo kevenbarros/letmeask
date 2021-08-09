@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom';
 import { auth, firebase } from './services/firebase';
 import Room from './pages/Room';
+import AdmRoom from './pages/AdmRoom'
 
 export const authContext = React.createContext({});
 function App() {
@@ -53,6 +54,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/room/new" component={NewRoom} />
           <Route path="/rooms/:id" component={Room} />
+          <Route path="/admin/rooms/:id" component={AdmRoom}/>
         </Switch>
       </authContext.Provider>
     </BrowserRouter>

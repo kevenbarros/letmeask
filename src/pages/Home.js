@@ -19,9 +19,8 @@ const Home = () => {
   const [roomCode, setRoomCode] = React.useState('');
 
   async function navegaçao() {
-    if (!user) {
-      await LogarNoGoogle();
-    }
+    await LogarNoGoogle();
+
     history.push('/room/new');
   }
   //criar funçao para entrar na sala
@@ -34,6 +33,10 @@ const Home = () => {
     if (!roomRef.exists()) {
       alert('essa sala não existe');
       return;
+    }
+    if(roomRef.val().endedAt){
+      alert('sala já encerrada')
+      return
     }
     history.push(`rooms/${roomCode}`);
   }
